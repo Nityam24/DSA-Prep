@@ -27,5 +27,9 @@ The repository is organized as follows:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/dsa-practice.git
+   git clone https://github.com/your-username/DSA-prep.git
+   ```
+
+   ```bash
+   cd dsa-practice
    ```
