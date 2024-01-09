@@ -20,7 +20,7 @@
     //vector<int> searchRange(vector<int>& nums, int target) {
         // Implementation code...
   ////  }
-};
+//};
 // class Solution {
 // public:
 //     vector<int> searchRange(vector<int>& nums, int t) {
