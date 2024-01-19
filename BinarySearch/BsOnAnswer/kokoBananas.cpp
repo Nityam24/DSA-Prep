@@ -73,3 +73,45 @@ public:
         return lower_lim; // Return the smallest number of bananas to be eaten per hour
     }
 };
+
+
+//coding ninjas solution:
+
+#include<limits.h>
+int is_possible(vector<int>v,int mid,int h){
+    int temp=0;
+    for(int i=0;i<v.size();i++){
+      if(v[i]%mid==0)
+       temp+=v[i]/mid;
+      else
+      {
+          temp+=v[i]/mid;
+          temp+=1;
+      }
+      if(temp>h)
+       return 0;
+    }
+    return 1;
+}
+int minimumRateToEatBananas(vector<int> v, int h) {
+    // Write Your Code Here
+    int low=1;
+    int high=INT_MIN;
+    int mid;
+    int t;
+    for(int i=0;i<v.size();i++){
+        if(v[i]>high)
+         high=v[i];
+    }
+
+    while(low<=high){
+        mid = low+(high-low)/2;
+
+        if (is_possible(v, mid, h) == 1) {
+         t = mid;
+         high = mid - 1;
+        } else
+         low=mid+1;
+    }
+    return t;
+}
