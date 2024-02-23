@@ -28,8 +28,18 @@ public:
 
 
 //optimize way
+/**
+ * @class Solution
+ * @brief Class that calculates the power of a number using recursion.
+ */
 class Solution {
 public:
+    /**
+     * @brief Calculates the power of a number.
+     * @param x The base number.
+     * @param n The exponent.
+     * @return The result of x raised to the power of n.
+     */
     double myPow(double x, int n) {
         if(n==0) return 1;
         if(n<0) {
